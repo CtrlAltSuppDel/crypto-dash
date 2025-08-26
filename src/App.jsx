@@ -19,10 +19,8 @@ const App = () => {
         );
         if (!res.ok) throw new Error("Failed to fetch data");
         const data = await res.json();
-        console.log(data);
         setCoins(data);
       } catch (error) {
-        console.log(error.message);
         setError(error.message);
       } finally {
         setLoading(false);
