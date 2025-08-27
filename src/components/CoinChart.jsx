@@ -31,7 +31,7 @@ const CoinChart = ({ coinId }) => {
     const fetchPrices = async () => {
       try {
         const res = await fetch(
-          `${API_URL}${coinId}/market_chart?vs_currency=usd&days=7`
+          `${API_URL}/${coinId}/market_chart?vs_currency=usd&days=7`
         );
         if (!res.ok) throw new Error("Failed to fetch the data");
         const data = await res.json();
