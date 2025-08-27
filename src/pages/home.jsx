@@ -2,6 +2,7 @@ import CoinCard from "../components/CoinCard";
 import FilterInput from "../components/FilterInput";
 import LimitSelector from "../components/LimitSelector";
 import SortBySelector from "../components/SortBySelector";
+import Spinner from "../components/Spinner";
 
 const HomePage = ({
   coins,
@@ -64,7 +65,7 @@ const HomePage = ({
         <SortBySelector sortBy={sortBy} onSortByChange={onSortByChange} />
       </div>
 
-      {loading && <div>Loading...</div>}
+      {loading && <Spinner color="white" />}
       {error && <div className="error">{error}</div>}
 
       {!loading && !error && (
